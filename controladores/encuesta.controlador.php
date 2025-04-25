@@ -3,9 +3,17 @@ require_once __DIR__ . "/../modelos/encuesta.modelo.php";
 $respuesta = ControladorActividades::ctrCrearEncuesta();
 
 if ($respuesta == "ok") {
-    echo "Encuesta guardada";
+    echo "
+    <script>
+        alert('Guardar con éxito.');
+        window.history.go(-2);
+        setTimeout(() => location.reload(), 500);
+    </script>";
 } else {
-    echo "Error al guardar la encuesta";
+    echo "
+    <script>
+        alert('Error al guardar la encuesta, por favor intente nuevamente.');
+    </script>";
 }
 class ControladorActividades
 {
@@ -41,9 +49,8 @@ class ControladorActividades
             );
 
             $respuesta = ModeloEncuesta::mdlGuardarEncuesta($datos);
-
             return $respuesta;
         }
     }
-  
+
 }

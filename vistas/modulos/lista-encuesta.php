@@ -2,11 +2,48 @@
   <section class="content">
     <div class="box container">
       <div class="card">
-        <div class="card-title">
+        <div class="card-title"
+          style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
           <h3>Encuesta</h3>
+          <div>
+            <a href="encuesta" class="btn btn-primary">Crear encuesta</a>
+          </div>
         </div>
+        </br>
         <div class="card-body">
           <form id="formEncuesta" method="POST" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <label for="">Programa:</label>
+                <select name="programa" required id="" class="form-control">
+                  <option value="">Seleccionar tipo de actividad</option>
+                  <?php
+                  require_once "controladores/programas.controlador.php";
+                  $item = null;
+                  $valor = null;
+                  $programa = ControladorProgramas::ctrMostrarProgramas($item, $valor);
+                  foreach ($programa as $key => $value) {
+                    echo '<option value="' . $value["id"] . '">' . $value["nombre"] . '</option>';
+                  }
+                  ?>
+                </select>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <label for="">Proyecto:</label>
+                <select name="proyecto" required id="" class="form-control">
+                  <option value=""></option>
+                  <?php
+
+                  $item = null;
+                  $valor = null;
+                  $donantes = ControladorDonantes::ctrMostrarDonantes($item, $valor);
+                  foreach ($donantes as $key => $value) {
+                    echo '<option value="' . $value["id"] . '">' . $value["categoria"] . '</option>';
+                  }
+                  ?>
+                </select>
+              </div>
+            </div>
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <label for="">Departamento:</label>
@@ -48,7 +85,6 @@
                   <option value="">-Seleccione opción--</option>
                   <option value="Masculino">Masculino</option>
                   <option value="Femenino">Femenino</option>
-                  <option value="ONG">ONG</option>
                 </select>
               </div>
 
@@ -70,41 +106,106 @@
                   <option value="Indigen">Indigen</option>
                   <option value="Afrodesendiente">Afrodesendiente</option>
                   <option value="N/A">N/A</option>
-                  <option value="Otro Cual">Otro Cual</option>
+                  <option value="Otro Cual">Otro</option>
                 </select>
               </div>
             </div>
-            <div style="display: flex;justify-content: space-around;">
-              <button type="button" id="btnFiltrar" class="btn btn-success btn-md">Buscar</button>
+            <br>
+            <div style="display: flex;justify-content: center;gap: 10px;" class="mt-3">
+              <button type="button" id="limpiar" class="btn btn-default btn-md">Limpiar</button>
+              <button type="button" id="btnFiltrar" onclick="getData()" class="btn btn-success btn-md">Buscar</button>
             </div>
           </form>
         </div>
       </div>
       <div class="card">
+        <button onclick="descargarPDF()" class="btn btn-primary" style="float: inline-end;">Descargar PDF</button>
         <div class="card-body">
-          <table class="table table-bordered" id="tabla-resultados">
-            <thead>
-              <tr>
-                <th>Etnia</th>
-                <th>Sexo</th>
-                <th>Edad</th>
-                <th>Departamento</th>
-                <th>Municipio</th>
-                <th># Personas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Resultados por PHP o JS -->
-            </tbody>
-          </table>
+          <div id="seccionTable">
+            <h2>Resultado de Encuestas</h2>
+            <h3 id="total"> </h3>
+            <table class="table table-bordered table-striped dt-responsive tablas tabla-resultados" width="100%">
+              <thead>
+                <tr>
+                  <th>Etnia</th>
+                  <th>Sexo</th>
+                  <th>Edad</th>
+                  <th>Departamento</th>
+                  <th>Municipio</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-body" id="seccionPDF" style="display: none;">
+            <h2>Resultado de Encuestas</h2>
+            <p>Total registros: <strong>5</strong></p>
+            <div class="row">
+              <div class="col-12">
+                <table class="table table-bordered table-striped dt-responsive  tabla2-resultados" width="100%">
+                  <thead>
+                    <tr>
+                      <th>Etnia</th>
+                      <th>Sexo</th>
+                      <th>Edad</th>
+                      <th>Departamento</th>
+                      <th>Municipio</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
   </section>
-
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+  #seccionPDF {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    color: #333;
+    background: white;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  #seccionPDF table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #seccionPDF th,
+  #seccionPDF td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  #seccionPDF th {
+    background-color: #eee;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
+  $(document).ready(function () {
+    getData();
+  });
   document.getElementById("seleccionarDepartamentoCrear").addEventListener("change", async function () {
     try {
       const selectElement = document.getElementById('seleccionarDepartamentoCrear');
@@ -124,33 +225,74 @@
     }
   });
 
-  $('#btnFiltrar').on('click', function () {
-    const formData = $('#formEncuesta').serialize();
+  $('#limpiar').on('click', function () {
+    const selects = document.querySelectorAll('select');
+    selects.forEach(select => {
+      select.selectedIndex = 0;
+    });
+  })
 
+  function getData() {
+    const formData = $('#formEncuesta').serialize();
     $.ajax({
       url: 'controladores/lista-encuesta.controlador.php',
       type: 'POST',
       data: formData,
       success: function (response) {
-        let data = JSON.parse(response)
-        const tbody = document.querySelector("#tabla-resultados tbody");
+        let res = JSON.parse(response);
+        let total = res.total_registros;
+        document.getElementById("total").textContent = 'Total registros: ' + total;
+        const tbody = document.querySelector(".tabla-resultados tbody");
+        const tbody2 = document.querySelector(".tabla2-resultados tbody");
         tbody.innerHTML = "";
-        data.forEach(item => {
+        tbody2.innerHTML = "";
+        res.data.forEach(item => {
           const tr = document.createElement("tr");
+          const tr2 = document.createElement("tr");
           tr.innerHTML = `
             <td>${item.etnia}</td>
             <td>${item.sexo}</td>
             <td>${item.edad}</td>
-            <td>${item.departamentos.nombre}</td>
-            <td>${item.municipio_id}</td>
-            <td>${item.total}</td>
+            <td>${item.departamento}</td>
+            <td>${item.municipio}</td>
           `;
           tbody.appendChild(tr);
+          tr2.innerHTML = `
+            <td>${item.etnia}</td>
+            <td>${item.sexo}</td>
+            <td>${item.edad}</td>
+            <td>${item.departamento}</td>
+            <td>${item.municipio}</td>
+          `;
+          tbody.appendChild(tr);
+          tbody2.appendChild(tr2);
         });
       },
       error: function () {
         alert('Ocurrió un error al procesar la encuesta.');
       }
     });
-  });
+
+  };
+
+  async function descargarPDF() {
+    const { jsPDF } = window.jspdf;
+    const seccion = document.getElementById('seccionPDF');
+    const tabla = document.getElementById('seccionTable');
+    seccion.style.display = "block"
+    tabla.style.display = "none"
+    const canvas = await html2canvas(seccion, { scale: 5 }); // escala x2
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF();
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    const now = new Date(Date.now());
+    const day = now.getDate();
+    const month = now.getMonth() + 1;
+    const year = now.getFullYear();
+    tabla.style.display = "block"
+    seccion.style.display = "none"
+    pdf.save(`Resumen de Encuestas ${day}/${month}/${year}.pdf`);
+  }
 </script>
