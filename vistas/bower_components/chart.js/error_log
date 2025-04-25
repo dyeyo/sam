@@ -1,0 +1,321 @@
+[25-Jan-2022 14:33:12 America/Bogota] PHP Warning:  require_once(/home/retazosn/public_html/sam/extensiones/vendor/composer/autoload_real.php): failed to open stream: No such file or directory in /home/retazosn/public_html/sam/extensiones/vendor/autoload.php on line 5
+[25-Jan-2022 14:33:12 America/Bogota] PHP Fatal error:  require_once(): Failed opening required '/home/retazosn/public_html/sam/extensiones/vendor/composer/autoload_real.php' (include_path='.:/usr/share/php:/opt/alt/php74/usr/share/php:/opt/alt/php74/usr/share/pear') in /home/retazosn/public_html/sam/extensiones/vendor/autoload.php on line 5
+[25-Jan-2022 14:36:08 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 14:36:18 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 14:36:24 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 14:36:41 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 15:06:24 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 15:22:35 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 15:22:53 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 15:35:06 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 15:35:13 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 15:36:34 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 16:54:44 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 16:54:56 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 16:59:06 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 16:59:14 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 16:59:22 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'juan')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:05:04 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'juan')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:05:10 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:25:47 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:27:03 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:27:07 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:30:36 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:30:46 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'a')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:31:21 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:31:26 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'a')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 17:32:09 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[25-Jan-2022 18:56:30 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[26-Jan-2022 08:47:27 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000] [1044] Access denied for user 'retazosn_root'@'190.8.176.134' to database 'retazosn_sis_inventario' in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=190....', 'retazosn_root', 'Omeneses87**')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[26-Jan-2022 08:51:07 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '181.52.150.86:3306' (111) in /home/retazosn/public_html/sam/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam/modelos/conexion.php(9): PDO->__construct('mysql:host=181....', 'retazosn_root', 'Omeneses87**')
+#1 /home/retazosn/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam/modelos/conexion.php on line 9
+[26-Jan-2022 09:19:39 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000] [1044] Access denied for user 'retazosn_root'@'localhost' to database 'retazosn_sis_inventario' in /home/retazosn/public_html/sam1/modelos/conexion.php:9
+Stack trace:
+#0 /home/retazosn/public_html/sam1/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'retazosn_root', 'Omeneses87**')
+#1 /home/retazosn/public_html/sam1/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/retazosn/public_html/sam1/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'admin')
+#3 /home/retazosn/public_html/sam1/vistas/modulos/login.php(44): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/retazosn/public_html/sam1/vistas/plantilla.php(174): include('/home/retazosn/...')
+#5 /home/retazosn/public_html/sam1/controladores/plantilla.controlador.php(7): include('/home/retazosn/...')
+#6 /home/retazosn/public_html/sam1/index.php(18): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/retazosn/public_html/sam1/modelos/conexion.php on line 9
