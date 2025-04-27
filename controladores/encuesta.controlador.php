@@ -26,6 +26,7 @@ class ControladorActividades
             move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
 
             $datos = array(
+                "nombre" => $_POST["nombre"],
                 "programa_id" => $_POST["programa"],
                 "proyecto_id" => $_POST["proyecto"],
                 "actividad" => $_POST["actividad"],

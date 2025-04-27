@@ -8,6 +8,12 @@
         <div class="card-body">
           <form action="controladores/encuesta.controlador.php" method="POST" enctype="multipart/form-data">
             <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <label for="">Nombre completo:</label>
+                <input name="nombre" required id="" class="form-control">
+              </div>
+            </div>
+            <div class="row">
               <div class="col-sm-12 col-md-6">
                 <label for="">Programa:</label>
                 <select name="programa" required id="" class="form-control">
@@ -182,7 +188,7 @@
               </div>
               <div class="col-sm-12 col-md-6" id="otroCual">
                 <label for="">Cual:</label>
-                <input  type="text" class="form-control" name="etnia_otro">
+                <input type="text" class="form-control" name="etnia_otro">
               </div>
             </div>
             <div class="row mt-3">

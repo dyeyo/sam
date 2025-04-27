@@ -6,7 +6,12 @@ class ModeloEncuesta
 {
 	static public function mdlGuardarEncuesta($datos)
 	{
-		$stmt = Conexion::conectar()->prepare("INSERT INTO encuestas (programa_id, proyecto_id, actividad, responsable_id, tipo_documento, num_documento, departamento_id, municipio_id, fecha, correo, telefono, edad, escolaridad, cargo, sexo, ubicacion, etnia, etnia_otro, archivo, discapacidad) VALUES (:programa_id, :proyecto_id, :actividad, :responsable_id, :tipo_documento, :num_documento, :departamento_id, :municipio_id, :fecha, :correo, :telefono, :edad, :escolaridad, :cargo, :sexo, :ubicacion, :etnia, :etnia_otro, :archivo, :discapacidad)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO encuestas (
+		nombre, programa_id, proyecto_id, actividad, responsable_id, tipo_documento, num_documento, departamento_id, 
+		municipio_id, fecha, correo, telefono, edad, escolaridad, cargo, sexo, ubicacion, etnia, etnia_otro, archivo,
+		 discapacidad) VALUES (:nombre, :programa_id, :proyecto_id, :actividad, :responsable_id, :tipo_documento, 
+		 :num_documento, :departamento_id, :municipio_id, :fecha, :correo, :telefono, :edad, :escolaridad, :cargo, 
+		 :sexo, :ubicacion, :etnia, :etnia_otro, :archivo, :discapacidad)");
 
 		foreach ($datos as $clave => $valor) {
 			$stmt->bindParam(":" . $clave, $datos[$clave], PDO::PARAM_STR);

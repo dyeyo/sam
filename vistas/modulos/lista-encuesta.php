@@ -127,6 +127,7 @@
             <table class="table table-bordered table-striped dt-responsive tablas tabla-resultados" width="100%">
               <thead>
                 <tr>
+                  <th>Nombre completo</th>
                   <th>Etnia</th>
                   <th>Sexo</th>
                   <th>Edad</th>
@@ -147,6 +148,7 @@
                 <table class="table table-bordered table-striped dt-responsive  tabla2-resultados" width="100%">
                   <thead>
                     <tr>
+                      <th>Nombre completo</th>
                       <th>Etnia</th>
                       <th>Sexo</th>
                       <th>Edad</th>
@@ -250,6 +252,7 @@
           const tr = document.createElement("tr");
           const tr2 = document.createElement("tr");
           tr.innerHTML = `
+            <td>${item.nombre}</td>
             <td>${item.etnia}</td>
             <td>${item.sexo}</td>
             <td>${item.edad}</td>
@@ -258,6 +261,7 @@
           `;
           tbody.appendChild(tr);
           tr2.innerHTML = `
+            <td>${item.nombre}</td>
             <td>${item.etnia}</td>
             <td>${item.sexo}</td>
             <td>${item.edad}</td>
