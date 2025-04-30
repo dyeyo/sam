@@ -142,7 +142,7 @@
 
           <div class="card-body" id="seccionPDF" style="display: none;">
             <h2>Resultado de Encuestas</h2>
-            <p>Total registros: <strong>5</strong></p>
+            <p>Total registros: <strong id="total2"></strong></p>
             <div class="row">
               <div class="col-12">
                 <table class="table table-bordered table-striped dt-responsive  tabla2-resultados" width="100%">
@@ -244,6 +244,7 @@
         let res = JSON.parse(response);
         let total = res.total_registros;
         document.getElementById("total").textContent = 'Total registros: ' + total;
+        document.getElementById("total2").textContent =  total;
         const tbody = document.querySelector(".tabla-resultados tbody");
         const tbody2 = document.querySelector(".tabla2-resultados tbody");
         tbody.innerHTML = "";
@@ -256,8 +257,8 @@
             <td>${item.etnia}</td>
             <td>${item.sexo}</td>
             <td>${item.edad}</td>
-            <td>${item.departamento}</td>
-            <td>${item.municipio}</td>
+            <td>${item.nombre_departamento}</td>
+            <td>${item.nombre_municipio}</td>
           `;
           tbody.appendChild(tr);
           tr2.innerHTML = `
@@ -265,8 +266,8 @@
             <td>${item.etnia}</td>
             <td>${item.sexo}</td>
             <td>${item.edad}</td>
-            <td>${item.departamento}</td>
-            <td>${item.municipio}</td>
+            <td>${item.nombre_departamento}</td>
+            <td>${item.nombre_municipio}</td>
           `;
           tbody.appendChild(tr);
           tbody2.appendChild(tr2);

@@ -12,7 +12,7 @@ class ModeloProgramas
 			$stmt->execute();
 			return $stmt->fetch();
 		} else {
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla where id = 0");
 			$stmt->execute();
 			return $stmt->fetchAll();
 		}
@@ -20,5 +20,19 @@ class ModeloProgramas
 		$stmt = null;
 	}
 
+	static public function mdlMostrarProgamas($id)
+	{
+		if ($id != '0') {
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM programas WHERE user_id = :id");
+			$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+			$stmt->execute();
+			return $stmt->fetchAll(PDO::FETCH_ASSOC);
+		} else {
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM programas");
+			$stmt->execute();
+			return $stmt->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+	}
 }
 
