@@ -9,10 +9,10 @@ class ModeloEncuesta
 		$conexion = Conexion::conectar();
 
 		$stmt = $conexion->prepare("INSERT INTO encuesta (
-        programa_id, proyecto_id, actividad, responsable_id, departamento_id, municipio_id
-    ) VALUES (
-        :programa_id, :proyecto_id, :actividad, :responsable_id, :departamento_id, :municipio_id
-    )");
+        programa_id, proyecto_id, actividad, responsable_id, departamento_id, municipio_id, archivo
+		) VALUES (
+			:programa_id, :proyecto_id, :actividad, :responsable_id, :departamento_id, :municipio_id, :archivo
+		)");
 
 		$stmt->bindParam(":programa_id", $datosCabecera["programa_id"], PDO::PARAM_INT);
 		$stmt->bindParam(":proyecto_id", $datosCabecera["proyecto_id"], PDO::PARAM_INT);
@@ -20,9 +20,10 @@ class ModeloEncuesta
 		$stmt->bindParam(":responsable_id", $datosCabecera["responsable_id"], PDO::PARAM_INT);
 		$stmt->bindParam(":departamento_id", $datosCabecera["departamento_id"], PDO::PARAM_INT);
 		$stmt->bindParam(":municipio_id", $datosCabecera["municipio_id"], PDO::PARAM_INT);
+		$stmt->bindParam(":archivo", $datosCabecera["archivo"], PDO::PARAM_STR);
 
 		if ($stmt->execute()) {
-			return $conexion->lastInsertId(); // ← Usas la misma conexión
+			return $conexion->lastInsertId(); 
 		} else {
 			return "error";
 		}
@@ -50,26 +51,39 @@ class ModeloEncuesta
 		}
 	}
 
-
 	public static function filtrarEncuestas($filtros)
 	{
 		$db = Conexion::conectar();
 
 		$where = "WHERE 1";
 		$params = [];
+		if (!empty($filtros['programa'])) {
+			$where .= " AND e.programa_id = :programa";
+			$params[':programa'] = $filtros['programa'];
+		}
+
+		if (!empty($filtros['proyecto'])) {
+			$where .= " AND e.proyecto_id = :proyecto";
+			$params[':proyecto'] = $filtros['proyecto'];
+		}
 
 		if (!empty($filtros['etnia'])) {
-			$where .= " AND e.etnia = :etnia";
+			$where .= " AND de.etnia = :etnia";
 			$params[':etnia'] = $filtros['etnia'];
 		}
 
 		if (!empty($filtros['sexo'])) {
-			$where .= " AND e.sexo = :sexo";
+			$where .= " AND de.sexo = :sexo";
 			$params[':sexo'] = $filtros['sexo'];
 		}
 
+		if (!empty($filtros['ubicacion'])) {
+			$where .= " AND de.ubicacion = :ubicacion";
+			$params[':ubicacion'] = $filtros['ubicacion'];
+		}
+
 		if (!empty($filtros['edad'])) {
-			$where .= " AND e.edad = :edad";
+			$where .= " AND de.edad = :edad";
 			$params[':edad'] = $filtros['edad'];
 		}
 

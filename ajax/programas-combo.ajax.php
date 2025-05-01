@@ -1,6 +1,6 @@
 <?php
 
-require_once "../controladores/programas.controlador.php";
+require_once "../controladores/programa.controlador.php";
 require_once "../modelos/programa.modelo.php";
 
 class AjaxProgramas{

@@ -32,7 +32,7 @@
                   <select name="programa" required id="programa" class="form-control">
                     <option value="">Seleccionar tipo de actividad</option>
                     <?php
-                    require_once "controladores/programas.controlador.php";
+                    require_once "controladores/programa.controlador.php";
                     $item = null;
                     $valor = null;
                     $programa = ControladorProgramas::ctrMostrarProgramas($item, $valor);
@@ -93,6 +93,11 @@
                   <input required type="file" class="form-control" id="archivo" name="archivo">
                 </div>
               </div>
+              <div style="display: flex;justify-content: center;gap: 10px; margin-top: 1em;" class="mt-3">
+                <button type="button" id="limpiar" class="btn btn-default btn-md">Limpiar</button>
+                <button type="button" id="btnFiltrar" onclick="guardarCabecera()" class="btn btn-success btn-md">Guardar
+                  cabecera</button>
+              </div>
               <br>
             </div>
         </div>
@@ -101,23 +106,21 @@
     <div class="card">
       <div class="card-title">
         <h3>Detalle Encuesta</h3>
-        <div style="display: flex;flex-direction: row-reverse;">
-          <button id="btn-add" class="btn btn-primary" type="button">+</button>
-        </div>
       </div>
       <div class="card-body" style="margin-top: 1em;" id="detalles-container">
         <div id="detalle" class="box container" style="padding: 1em;">
           <div class="row">
             <div class="col-sm-12 col-md-12">
               <label for="">Nombre completo:</label>
-              <input name="nombre[]" required id="" class="form-control">
+              <input name="nombre" required id="nombre" class="form-control">
+              <input name="encuesta_id" type="hidden" id="encuesta_id" class="form-control">
             </div>
           </div>
 
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <label for="">Tipo Documento:</label>
-              <select name="tipo_documento[]" required id="" class="form-control">
+              <select name="tipo_documento" required id="tipo_documento" class="form-control">
                 <option value="">-Seleccione opción--</option>
                 <option value="TI">TI</option>
                 <option value="CC">CC</option>
@@ -127,28 +130,28 @@
             </div>
             <div class="col-sm-12 col-md-6">
               <label for="">Num Documento:</label>
-              <input required type="text" class="form-control" name="num_documento[]" id="">
+              <input required type="text" class="form-control" name="num_documento" id="num_documento">
             </div>
           </div>
 
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <label for="">Fecha:</label>
-              <input required type="date" class="form-control" name="fecha[]" id="">
+              <input required type="date" class="form-control" name="fecha" id="fecha">
             </div>
             <div class="col-sm-12 col-md-6">
               <label for="">Correo electónico</label>
-              <input required type="email" class="form-control" name="correo[]" id="">
+              <input required type="email" class="form-control" name="correo" id="correo">
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <label for="">Telefono:</label>
-              <input required type="text" class="form-control" name="telefono[]" id="">
+              <input required type="number" class="form-control" name="telefono" id="telefono">
             </div>
             <div class="col-sm-12 col-md-6">
               <label for="">Edad:</label>
-              <select name="edad[]" required id="" class="form-control">
+              <select name="edad" required id="edad" class="form-control">
                 <option value="Menor a 18">Menor a 18</option>
                 <option value="10 a 24">10 a 24</option>
                 <option value="25 a 34">25 a 34</option>
@@ -161,7 +164,7 @@
           <div class="row">
             <div class="col-sm-12 col-md-4">
               <label for="">Nivel De Escolaridad:</label>
-              <select name="escolaridad[]" required id="" class="form-control">
+              <select name="escolaridad" required id="escolaridad" class="form-control">
                 <option value="">-Seleccione opción--</option>
                 <option value="primaria">Primaria</option>
                 <option value="secundaria">Secundaria</option>
@@ -173,7 +176,7 @@
             </div>
             <div class="col-sm-12 col-md-4">
               <label for="">Cargo:</label>
-              <select name="cargo[]" required id="" class="form-control">
+              <select name="cargo" required id="cargo" class="form-control">
                 <option value="">-Seleccione opción--</option>
                 <option value="Publica">Publica</option>
                 <option value="Privada">Privada</option>
@@ -182,14 +185,14 @@
             </div>
             <div class="col-sm-12 col-md-4">
               <label for="">Nombre entidad:</label>
-              <input required type="text" class="form-control" name="entidad[]" id="">
+              <input required type="text" class="form-control" name="entidad" id="entidad">
 
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <label for="">Sexo:</label>
-              <select name="sexo[]" required id="" class="form-control">
+              <select name="sexo" required id="sexo" class="form-control">
                 <option value="">-Seleccione opción--</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
@@ -198,7 +201,7 @@
             </div>
             <div class="col-sm-12 col-md-6">
               <label for="">Ubicacion:</label>
-              <select name="ubicacion[]" required id="" class="form-control">
+              <select name="ubicacion" required id="ubicacion" class="form-control">
                 <option value="">-Seleccione opción--</option>
                 <option value="Urbano">Urbano</option>
                 <option value="Rural">Rural</option>
@@ -208,7 +211,7 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <label for="">Etina:</label>
-              <select onchange="otherRaza()" name="etnia[]" id="raza" class="form-control">
+              <select onchange="otherRaza()" name="etnia" id="etnia" class="form-control">
                 <option value="">-Seleccione opción--</option>
                 <option value="Mestizo">Mestizo</option>
                 <option value="Indigen">Indigen</option>
@@ -219,36 +222,36 @@
             </div>
             <div class="col-sm-12 col-md-6" id="otroCual">
               <label for="">Cual:</label>
-              <input type="text" class="form-control" name="etnia_otro[]">
+              <input type="text" class="form-control" id="etnia_otro" name="etnia_otro">
             </div>
             <div class="col-sm-12 col-md-6">
               <div style="    display: flex;gap: 1em;align-items: flex-end;margin-top: 1em;">
                 <label for="">Discapacidad:</label>
                 <div class="form-check">
-                  <input required class="form-check-input" type="radio" name="discapacidad[]" id="flexRadioDefault1">
+                  <input required class="form-check-input" type="radio" name="discapacidad" id="flexRadioDefault1">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Si
                   </label>
                 </div>
                 <div class="form-check">
-                  <input required class="form-check-input" type="radio" name="discapacidad[]" id="flexRadioDefault2"
+                  <input required class="form-check-input" type="radio" name="discapacidad" id="flexRadioDefault2"
                     checked>
                   <label class="form-check-label" for="flexRadioDefault2">
                     No
                   </label>
                 </div>
               </div>
-
             </div>
+          </div>
+          <div class="" style="display: flex;justify-content: center;gap: 10px; padding: 1em;">
+            <button onclick="window.history.back();" type="button" class="btn btn-default btn-md">Volver</button>
+            <button type="button" onclick="guardarDetalle()" class="btn btn-success btn-md">Guardar</button>
           </div>
         </div>
         <hr>
       </div>
     </div>
-    <div class="box container" style="display: flex;justify-content: center;gap: 10px; padding: 1em;">
-  <button onclick="window.history.back();" type="button" class="btn btn-default btn-md">Volver</button>
-  <button type="button" onclick="guardar()" class="btn btn-success btn-md">Guardar</button>
-</div>
+
 </div>
 
 <br>
@@ -277,8 +280,9 @@
     try {
       const selectElement = document.getElementById('responsable');
       const id_prod = selectElement.value;
-      const response = await fetch(`ajax/programas-combo.ajax.php?id=${id_prod}`);
+      const response = await fetch('ajax/programas-combo.ajax.php?id=' + id_prod);
       const data = await response.json();
+      console.log(data);
       const programaSelect = document.getElementById('programa');
       programaSelect.innerHTML = '<option value="">Seleccionar programa</option>';
       data.forEach(item => {
@@ -288,7 +292,7 @@
         programaSelect.appendChild(option);
       });
     } catch (error) {
-      console.error('Error fetching municipios:', error);
+      console.error('Error fetching programa:', error);
     }
   });
 
@@ -298,6 +302,7 @@
       const id_prod = selectElement.value;
       const response = await fetch(`ajax/programas-combo.ajax.php?id=${id_prod}`);
       const data = await response.json();
+      console.log(data);
       const programaSelect = document.getElementById('programa');
       programaSelect.innerHTML = '<option value="">Seleccionar programa</option>';
       data.forEach(item => {
@@ -356,7 +361,7 @@
     container.appendChild(clone); // Agrega el clon al container
   });
 
-  function guardar() {
+  function guardarCabecera() {
     const detalles = document.querySelectorAll('#detalle');
     const formData = new FormData();
 
@@ -372,33 +377,71 @@
       formData.append('archivo', archivoInput.files[0]);
     }
 
-    detalles.forEach(seccion => {
-      formData.append('nombre[]', seccion.querySelector('[name="nombre[]"]').value);
-      formData.append('tipo_documento[]', seccion.querySelector('[name="tipo_documento[]"]').value);
-      formData.append('num_documento[]', seccion.querySelector('[name="num_documento[]"]').value);
-      formData.append('fecha[]', seccion.querySelector('[name="fecha[]"]').value);
-      formData.append('correo[]', seccion.querySelector('[name="correo[]"]').value);
-      formData.append('telefono[]', seccion.querySelector('[name="telefono[]"]').value);
-      formData.append('edad[]', seccion.querySelector('[name="edad[]"]').value);
-      formData.append('escolaridad[]', seccion.querySelector('[name="escolaridad[]"]').value);
-      formData.append('cargo[]', seccion.querySelector('[name="cargo[]"]').value);
-      formData.append('entidad[]', seccion.querySelector('[name="entidad[]"]').value);
-      formData.append('sexo[]', seccion.querySelector('[name="sexo[]"]').value);
-      formData.append('ubicacion[]', seccion.querySelector('[name="ubicacion[]"]').value);
-      formData.append('etnia[]', seccion.querySelector('[name="etnia[]"]').value);
-      formData.append('etnia_otro[]', seccion.querySelector('[name="etnia_otro[]"]').value);
-      const discapacidad = seccion.querySelector('[name="discapacidad[]"]:checked');
-      formData.append('discapacidad[]', discapacidad ? discapacidad.nextElementSibling.innerText : '');
-    });
-
     fetch('controladores/encuesta.controlador.php', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => response.json()) // <-- Cambia .text() por .json()
+      .then(result => {
+        console.log(result);
+        if (result) {
+          document.getElementById('encuesta_id').value = result;
+          alert("Cabecera de encuesta guardada");
+        } else {
+          alert("Error al guardar la encuesta: ");
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
+  function guardarDetalle() {
+    const detalles = document.querySelectorAll('#detalle');
+    const formData = new FormData();
+
+    formData.append('encuesta_id', document.getElementById('encuesta_id').value);
+    formData.append('nombre', document.getElementById('nombre').value);
+    formData.append('tipo_documento', document.getElementById('tipo_documento').value);
+    formData.append('num_documento', document.getElementById('num_documento').value);
+    formData.append('fecha', document.getElementById('fecha').value);
+    formData.append('correo', document.getElementById('correo').value);
+    formData.append('telefono', document.getElementById('telefono').value);
+    formData.append('edad', document.getElementById('edad').value);
+    formData.append('escolaridad', document.getElementById('escolaridad').value);
+    formData.append('cargo', document.getElementById('cargo').value);
+    formData.append('entidad', document.getElementById('entidad').value);
+    formData.append('sexo', document.getElementById('sexo').value);
+    formData.append('ubicacion', document.getElementById('ubicacion').value);
+    formData.append('etnia', document.getElementById('etnia').value);
+    formData.append('etnia_otro', document.getElementById('etnia_otro').value);
+    formData.append('etnia_otro', document.getElementsByName('discapacidad').value);
+
+    fetch('controladores/encuesta-detalle.controlador.php', {
       method: 'POST',
       body: formData
     })
       .then(response => response.text())
       .then(result => {
-        alert("Encuesta guardada con exito")
-        window.location = "lista-encuesta";
+        if (confirm("Registro  guardado ¿Desea guardar otro?")) {
+          document.getElementById('nombre').value = "";
+          document.getElementById('tipo_documento').value = "";
+          document.getElementById('num_documento').value = "";
+          document.getElementById('fecha').value = "";
+          document.getElementById('correo').value = "";
+          document.getElementById('telefono').value = "";
+          document.getElementById('edad').value = "";
+          document.getElementById('escolaridad').value = "";
+          document.getElementById('cargo').value = "";
+          document.getElementById('entidad').value = "";
+          document.getElementById('sexo').value = "";
+          document.getElementById('ubicacion').value = "";
+          document.getElementById('etnia').value = "";
+          document.getElementById('etnia_otro').value = "";
+          document.getElementsByName('discapacidad').value = "";
+        }else{
+          window.location = "lista-encuesta";
+        }
       })
       .catch(error => {
         console.error('Error:', error);

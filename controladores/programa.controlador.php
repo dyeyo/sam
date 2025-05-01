@@ -7,4 +7,9 @@ class ControladorProgramas {
 		$respuesta = ModeloProgramas::mdlMostrarProgramas($tabla, $item, $valor);
 		return $respuesta;
 	}
+
+	static public function ctrMostrarProgram($id){
+		$respuesta = ModeloProgramas::mdlMostrarProgamas($id);
+		return $respuesta;
+	}
 }

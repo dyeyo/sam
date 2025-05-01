@@ -18,7 +18,7 @@
                 <select name="programa" required id="" class="form-control">
                   <option value="">Seleccionar tipo de actividad</option>
                   <?php
-                  require_once "controladores/programas.controlador.php";
+                  require_once "controladores/programa.controlador.php";
                   $item = null;
                   $valor = null;
                   $programa = ControladorProgramas::ctrMostrarProgramas($item, $valor);

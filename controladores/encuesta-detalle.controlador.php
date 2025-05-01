@@ -28,28 +28,29 @@ class ControladorActividades
                 $ruta = 'uploads/' . $archivoNombre;
                 move_uploaded_file($_FILES['archivo']['tmp_name'], $ruta);
             }
-         
-            // Cabecera
-            $datosCabecera = [
-                'programa_id' => $_POST['programa'],
-                'proyecto_id' => $_POST['proyecto'],
-                'actividad' => $_POST['actividad'],
-                'responsable_id' => $_POST['responsable'],
-                'departamento_id' => $_POST['departamento'],
-                'municipio_id' => $_POST['municipio'],
-                'archivo' => $ruta
+            $datosDetalle = [
+                'encuesta_id' => $_POST['encuesta_id'],
+                'nombre' => $_POST['nombre'],
+                'tipo_documento' => $_POST['tipo_documento'],
+                'num_documento' => $_POST['num_documento'],
+                'fecha' => $_POST['fecha'],
+                'correo' => $_POST['correo'],
+                'telefono' => $_POST['telefono'],
+                'edad' => $_POST['edad'],
+                'escolaridad' => $_POST['escolaridad'],
+                'cargo' => $_POST['cargo'],
+                'entidad' => $_POST['entidad'],
+                'sexo' => $_POST['sexo'],
+                'ubicacion' => $_POST['ubicacion'],
+                'etnia' => $_POST['etnia'],
+                'etnia_otro' => $_POST['etnia_otro'],
+                'discapacidad' => $_POST['discapacidad'],
             ];
-          
-            $idEncuesta = ModeloEncuesta::mdlGuardarCabecera($datosCabecera);
 
-            if (!$idEncuesta) {
-                http_response_code(500);
-                echo json_encode(['status' => 'error', 'msg' => 'Error al guardar cabecera']);
-                exit;
-            }
-            header('Content-Type: application/json');
-            echo json_encode($idEncuesta); // Solo esto
-            exit;
+            $save = ModeloEncuesta::mdlGuardarEncuesta($datosDetalle);
+
+            // Éxito
+            echo json_encode(['status' => 'ok', 'msg' => $save]);
         }else{
             http_response_code(500);
             echo json_encode(['status' => 'error', 'msg' => 'Error en el servidor']);

@@ -8,9 +8,12 @@ class ControladorActividades
     static public function ctrFiltarEncuesta()
     {
         $filtros = [
+            'programa' => $_POST['programa'] ?? '',
+            'proyecto' => $_POST['proyecto'] ?? '',
             'etnia' => $_POST['etnia'] ?? '',
             'sexo' => $_POST['sexo'] ?? '',
             'edad' => $_POST['edad'] ?? '',
+            'ubicacion' => $_POST['ubicacion'] ?? '',
             'departamento' => isset($_POST['departamento']) ? intval($_POST['departamento']) : 0,
             'municipio' => isset($_POST['municipio']) ? intval($_POST['municipio']) : 0
         ];
