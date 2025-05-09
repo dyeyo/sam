@@ -71,6 +71,15 @@ class ModeloEncuesta
 			$where .= " AND de.etnia = :etnia";
 			$params[':etnia'] = $filtros['etnia'];
 		}
+		if (!empty($filtros['responsable'])) {
+			$where .= " AND e.responsable_id = :responsable";
+			$params[':responsable'] = $filtros['responsable'];
+		}
+
+		if (!empty($filtros['fecha'])) {
+			$where .= " AND e.fecha = :fecha";
+			$params[':fecha'] = $filtros['fecha'];
+		}
 
 		if (!empty($filtros['sexo'])) {
 			$where .= " AND de.sexo = :sexo";

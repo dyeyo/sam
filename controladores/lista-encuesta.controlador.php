@@ -14,6 +14,8 @@ class ControladorActividades
             'sexo' => $_POST['sexo'] ?? '',
             'edad' => $_POST['edad'] ?? '',
             'ubicacion' => $_POST['ubicacion'] ?? '',
+            'responsable' => $_POST['responsable'] ?? '',
+            'fecha' => $_POST['fecha'] ?? '',
             'departamento' => isset($_POST['departamento']) ? intval($_POST['departamento']) : 0,
             'municipio' => isset($_POST['municipio']) ? intval($_POST['municipio']) : 0
         ];

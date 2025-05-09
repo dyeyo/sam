@@ -1,0 +1,145 @@
+[03-May-2025 10:13:18 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php:15
+Stack trace:
+#0 /home/seguimie/public_html/sam/controladores/usuarios.controlador.php(17): ModeloUsuarios::mdlMostrarUsuarios()
+#1 /home/seguimie/public_html/sam/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#2 /home/seguimie/public_html/sam/vistas/plantilla.php(105): include('/home/seguimie/...')
+#3 /home/seguimie/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/seguimie/...')
+#4 /home/seguimie/public_html/sam/index.php(27): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php on line 15
+[03-May-2025 10:13:47 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php:15
+Stack trace:
+#0 /home/seguimie/public_html/sam/controladores/usuarios.controlador.php(17): ModeloUsuarios::mdlMostrarUsuarios()
+#1 /home/seguimie/public_html/sam/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#2 /home/seguimie/public_html/sam/vistas/plantilla.php(105): include('/home/seguimie/...')
+#3 /home/seguimie/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/seguimie/...')
+#4 /home/seguimie/public_html/sam/index.php(27): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php on line 15
+[03-May-2025 10:14:34 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'seguimie_root'@'libia.colombiahosting.com.co' (using password: YES) in /home/seguimie/public_html/sam/modelos/conexion.php:7
+Stack trace:
+#0 /home/seguimie/public_html/sam/modelos/conexion.php(7): PDO->__construct()
+#1 /home/seguimie/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/seguimie/public_html/sam/controladores/usuarios.controlador.php(17): ModeloUsuarios::mdlMostrarUsuarios()
+#3 /home/seguimie/public_html/sam/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/seguimie/public_html/sam/vistas/plantilla.php(105): include('/home/seguimie/...')
+#5 /home/seguimie/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/seguimie/...')
+#6 /home/seguimie/public_html/sam/index.php(27): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/seguimie/public_html/sam/modelos/conexion.php on line 7
+[03-May-2025 10:14:39 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'seguimie_root'@'libia.colombiahosting.com.co' (using password: YES) in /home/seguimie/public_html/sam/modelos/conexion.php:7
+Stack trace:
+#0 /home/seguimie/public_html/sam/modelos/conexion.php(7): PDO->__construct()
+#1 /home/seguimie/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/seguimie/public_html/sam/controladores/usuarios.controlador.php(17): ModeloUsuarios::mdlMostrarUsuarios()
+#3 /home/seguimie/public_html/sam/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/seguimie/public_html/sam/vistas/plantilla.php(105): include('/home/seguimie/...')
+#5 /home/seguimie/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/seguimie/...')
+#6 /home/seguimie/public_html/sam/index.php(27): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/seguimie/public_html/sam/modelos/conexion.php on line 7
+[03-May-2025 10:15:14 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'seguimie_root'@'libia.colombiahosting.com.co' (using password: YES) in /home/seguimie/public_html/sam/modelos/conexion.php:7
+Stack trace:
+#0 /home/seguimie/public_html/sam/modelos/conexion.php(7): PDO->__construct()
+#1 /home/seguimie/public_html/sam/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/seguimie/public_html/sam/controladores/usuarios.controlador.php(17): ModeloUsuarios::mdlMostrarUsuarios()
+#3 /home/seguimie/public_html/sam/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/seguimie/public_html/sam/vistas/plantilla.php(105): include('/home/seguimie/...')
+#5 /home/seguimie/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/seguimie/...')
+#6 /home/seguimie/public_html/sam/index.php(27): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/seguimie/public_html/sam/modelos/conexion.php on line 7
+[03-May-2025 10:16:31 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php:15
+Stack trace:
+#0 /home/seguimie/public_html/sam/controladores/usuarios.controlador.php(17): ModeloUsuarios::mdlMostrarUsuarios()
+#1 /home/seguimie/public_html/sam/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#2 /home/seguimie/public_html/sam/vistas/plantilla.php(105): include('/home/seguimie/...')
+#3 /home/seguimie/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/seguimie/...')
+#4 /home/seguimie/public_html/sam/index.php(27): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php on line 15
+[03-May-2025 10:17:31 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php:15
+Stack trace:
+#0 /home/seguimie/public_html/sam/controladores/usuarios.controlador.php(17): ModeloUsuarios::mdlMostrarUsuarios()
+#1 /home/seguimie/public_html/sam/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#2 /home/seguimie/public_html/sam/vistas/plantilla.php(105): include('/home/seguimie/...')
+#3 /home/seguimie/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/seguimie/...')
+#4 /home/seguimie/public_html/sam/index.php(27): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php on line 15
+[03-May-2025 10:18:34 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php:15
+Stack trace:
+#0 /home/seguimie/public_html/sam/controladores/usuarios.controlador.php(17): ModeloUsuarios::mdlMostrarUsuarios()
+#1 /home/seguimie/public_html/sam/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#2 /home/seguimie/public_html/sam/vistas/plantilla.php(105): include('/home/seguimie/...')
+#3 /home/seguimie/public_html/sam/controladores/plantilla.controlador.php(7): include('/home/seguimie/...')
+#4 /home/seguimie/public_html/sam/index.php(27): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/seguimie/public_html/sam/modelos/usuarios.modelo.php on line 15
+[03-May-2025 10:20:13 America/Bogota] PHP Warning:  Undefined array key "ruta" in /home/seguimie/public_html/sam/vistas/plantilla.php on line 77
+[03-May-2025 10:20:13 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 10:20:13 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[03-May-2025 10:26:39 America/Bogota] PHP Warning:  Undefined array key "ruta" in /home/seguimie/public_html/sam/vistas/plantilla.php on line 77
+[03-May-2025 10:26:39 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 10:26:39 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[03-May-2025 11:00:45 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 11:00:45 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[03-May-2025 15:09:49 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 15:09:49 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[03-May-2025 15:09:57 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 15:09:57 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[03-May-2025 15:26:07 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 15:26:07 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[03-May-2025 15:40:37 America/Bogota] PHP Warning:  Undefined array key "ruta" in /home/seguimie/public_html/sam/vistas/plantilla.php on line 77
+[03-May-2025 15:40:37 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 15:40:37 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[03-May-2025 18:21:58 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 18:21:58 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[03-May-2025 19:02:50 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[03-May-2025 19:02:50 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[04-May-2025 20:54:49 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[04-May-2025 20:54:49 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 08:23:23 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 08:23:23 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 10:23:03 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 10:23:03 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 11:31:41 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 11:31:41 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 11:35:17 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 11:35:17 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 14:53:46 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 14:53:46 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 15:19:35 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 15:19:35 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 15:47:43 America/Bogota] PHP Warning:  Undefined array key "ruta" in /home/seguimie/public_html/sam/vistas/plantilla.php on line 77
+[05-May-2025 15:47:43 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 15:47:43 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 16:02:39 America/Bogota] PHP Warning:  Undefined array key "ruta" in /home/seguimie/public_html/sam/vistas/plantilla.php on line 77
+[05-May-2025 16:02:39 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 16:02:39 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 16:39:10 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 16:39:10 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 21:01:00 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 21:01:00 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 22:17:08 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 22:17:08 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 22:19:01 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 22:19:01 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[05-May-2025 22:19:25 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[05-May-2025 22:19:25 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[06-May-2025 10:51:44 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[06-May-2025 10:51:44 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[06-May-2025 11:53:42 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[06-May-2025 11:53:42 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[06-May-2025 20:40:59 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[06-May-2025 20:40:59 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[07-May-2025 08:35:49 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[07-May-2025 08:35:49 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[07-May-2025 11:06:00 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[07-May-2025 11:06:00 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[07-May-2025 11:27:17 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[07-May-2025 11:27:17 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[07-May-2025 16:16:24 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[07-May-2025 16:16:24 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2
+[08-May-2025 22:13:03 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio.php on line 2
+[08-May-2025 22:13:03 America/Bogota] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/seguimie/public_html/sam/vistas/modulos/cabezote.php:3) in /home/seguimie/public_html/sam/vistas/modulos/inicio/cajas-superiores.php on line 2

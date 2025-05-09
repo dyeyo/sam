@@ -14,6 +14,29 @@
           <form id="formEncuesta" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="col-sm-12 col-md-6">
+                <label for="">Resposable:</label>
+                <select name="responsable" required id="responsable" class="form-control">
+                  <option value=""></option>
+                  <?php
+
+                  $item = null;
+                  $valor = null;
+                  $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
+                  $userSelect = $_SESSION["id"];
+                  foreach ($usuarios as $key => $value) {
+                    $selected = ($value["id"] == $userSelect) ? 'selected' : '';
+                    echo '<option value="' . $value["id"] . '" ' . $selected . '>' . $value["nombre"] . '</option>';
+                  }
+                  ?>
+                </select>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <label for="">Fecha:</label>
+                <input required type="date" class="form-control" name="fecha" id="fecha">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
                 <label for="">Programa:</label>
                 <select name="programa" required id="" class="form-control">
                   <option value="">Seleccionar tipo de actividad</option>
@@ -124,7 +147,7 @@
           <div id="seccionTable">
             <h2>Resultado de Encuestas</h2>
             <h3 id="total"> </h3>
-            <table class="table table-bordered table-striped dt-responsive tablas tabla-resultados" width="100%">
+            <table class="table table-bordered table-striped dt-responsive  tabla-resultados" width="100%">
               <thead>
                 <tr>
                   <th>Nombre completo</th>
@@ -236,6 +259,7 @@
 
   function getData() {
     const formData = $('#formEncuesta').serialize();
+
     $.ajax({
       url: 'controladores/lista-encuesta.controlador.php',
       type: 'POST',
@@ -244,41 +268,50 @@
         let res = JSON.parse(response);
         let total = res.total_registros;
         document.getElementById("total").textContent = 'Total registros: ' + total;
-        document.getElementById("total2").textContent =  total;
+        document.getElementById("total2").textContent = total;
+
+        // 1. Destruye DataTable antes de manipular el DOM
+        if ($.fn.DataTable.isDataTable('.tabla-resultados')) {
+          $('.tabla-resultados').DataTable().destroy();
+        }
+
         const tbody = document.querySelector(".tabla-resultados tbody");
         const tbody2 = document.querySelector(".tabla2-resultados tbody");
         tbody.innerHTML = "";
         tbody2.innerHTML = "";
+
+        // 2. Inserta datos al DOM
         res.data.forEach(item => {
           const tr = document.createElement("tr");
           const tr2 = document.createElement("tr");
-          tr.innerHTML = `
-            <td>${item.nombre}</td>
-            <td>${item.etnia}</td>
-            <td>${item.sexo}</td>
-            <td>${item.edad}</td>
-            <td>${item.nombre_departamento}</td>
-            <td>${item.nombre_municipio}</td>
-          `;
-          tbody.appendChild(tr);
-          tr2.innerHTML = `
-            <td>${item.nombre}</td>
-            <td>${item.etnia}</td>
-            <td>${item.sexo}</td>
-            <td>${item.edad}</td>
-            <td>${item.nombre_departamento}</td>
-            <td>${item.nombre_municipio}</td>
-          `;
+
+          const rowHTML = `
+          <td>${item.nombre}</td>
+          <td>${item.etnia}</td>
+          <td>${item.sexo}</td>
+          <td>${item.edad}</td>
+          <td>${item.nombre_departamento}</td>
+          <td>${item.nombre_municipio}</td>
+        `;
+
+          tr.innerHTML = rowHTML;
+          tr2.innerHTML = rowHTML;
+
           tbody.appendChild(tr);
           tbody2.appendChild(tr2);
+        });
+
+        // 3. Vuelve a inicializar DataTable
+        $('.tabla-resultados').DataTable({
+          ordering: false,
+          pageLength: 10
         });
       },
       error: function () {
         alert('Ocurrió un error al procesar la encuesta.');
       }
     });
-
-  };
+  }
 
   async function descargarPDF() {
     const { jsPDF } = window.jspdf;

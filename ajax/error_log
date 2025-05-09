@@ -1,0 +1,12 @@
+[03-May-2025 18:22:18 America/Bogota] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; AjaxProgramas has a deprecated constructor in /home/seguimie/public_html/sam/ajax/programas-combo.ajax.php on line 6
+[03-May-2025 18:22:18 America/Bogota] PHP Fatal error:  Uncaught Error: Call to undefined function json_encode() in /home/seguimie/public_html/sam/ajax/programas-combo.ajax.php:14
+Stack trace:
+#0 /home/seguimie/public_html/sam/ajax/programas-combo.ajax.php(19): AjaxProgramas->ajaxProgramas()
+#1 {main}
+  thrown in /home/seguimie/public_html/sam/ajax/programas-combo.ajax.php on line 14
+[03-May-2025 18:22:34 America/Bogota] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; AjaxProgramas has a deprecated constructor in /home/seguimie/public_html/sam/ajax/programas-combo.ajax.php on line 6
+[03-May-2025 18:22:34 America/Bogota] PHP Fatal error:  Uncaught Error: Call to undefined function json_encode() in /home/seguimie/public_html/sam/ajax/programas-combo.ajax.php:14
+Stack trace:
+#0 /home/seguimie/public_html/sam/ajax/programas-combo.ajax.php(19): AjaxProgramas->ajaxProgramas()
+#1 {main}
+  thrown in /home/seguimie/public_html/sam/ajax/programas-combo.ajax.php on line 14
