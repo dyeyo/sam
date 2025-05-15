@@ -270,9 +270,11 @@
         document.getElementById("total").textContent = 'Total registros: ' + total;
         document.getElementById("total2").textContent = total;
 
-        // 1. Destruye DataTable antes de manipular el DOM
-        if ($.fn.DataTable.isDataTable('.tabla-resultados')) {
-          $('.tabla-resultados').DataTable().destroy();
+        const $tabla = $('.tabla-resultados');
+
+        // 1. Destruir DataTable si ya está inicializado
+        if ($.fn.DataTable.isDataTable($tabla)) {
+          $tabla.DataTable().clear().destroy();
         }
 
         const tbody = document.querySelector(".tabla-resultados tbody");
@@ -280,30 +282,25 @@
         tbody.innerHTML = "";
         tbody2.innerHTML = "";
 
-        // 2. Inserta datos al DOM
         res.data.forEach(item => {
-          const tr = document.createElement("tr");
-          const tr2 = document.createElement("tr");
-
           const rowHTML = `
-          <td>${item.nombre}</td>
-          <td>${item.etnia}</td>
-          <td>${item.sexo}</td>
-          <td>${item.edad}</td>
-          <td>${item.nombre_departamento}</td>
-          <td>${item.nombre_municipio}</td>
+          <tr>
+            <td>${item.nombre}</td>
+            <td>${item.etnia}</td>
+            <td>${item.sexo}</td>
+            <td>${item.edad}</td>
+            <td>${item.nombre_departamento}</td>
+            <td>${item.nombre_municipio}</td>
+          </tr>
         `;
 
-          tr.innerHTML = rowHTML;
-          tr2.innerHTML = rowHTML;
-
-          tbody.appendChild(tr);
-          tbody2.appendChild(tr2);
+          tbody.insertAdjacentHTML('beforeend', rowHTML);
+          tbody2.insertAdjacentHTML('beforeend', rowHTML);
         });
 
-        // 3. Vuelve a inicializar DataTable
-        $('.tabla-resultados').DataTable({
-          ordering: false,
+        // 2. Inicializar DataTable correctamente
+        $tabla.DataTable({
+          ordering: true,
           pageLength: 10
         });
       },

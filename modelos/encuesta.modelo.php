@@ -57,6 +57,17 @@ class ModeloEncuesta
 
 		$where = "WHERE 1";
 		$params = [];
+
+		if (!empty($filtros['responsable'])) {
+			$where .= " AND e.responsable_id = :responsable";
+			$params[':responsable'] = $filtros['responsable'];
+		}
+
+		if (!empty($filtros['fecha'])) {
+			$where .= " AND e.fecha = :fecha";
+			$params[':fecha'] = $filtros['fecha'];
+		}
+		
 		if (!empty($filtros['programa'])) {
 			$where .= " AND e.programa_id = :programa";
 			$params[':programa'] = $filtros['programa'];
@@ -70,15 +81,6 @@ class ModeloEncuesta
 		if (!empty($filtros['etnia'])) {
 			$where .= " AND de.etnia = :etnia";
 			$params[':etnia'] = $filtros['etnia'];
-		}
-		if (!empty($filtros['responsable'])) {
-			$where .= " AND e.responsable_id = :responsable";
-			$params[':responsable'] = $filtros['responsable'];
-		}
-
-		if (!empty($filtros['fecha'])) {
-			$where .= " AND e.fecha = :fecha";
-			$params[':fecha'] = $filtros['fecha'];
 		}
 
 		if (!empty($filtros['sexo'])) {
